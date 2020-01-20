@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import profileImg from '../images/about.jpeg'
 
 export default class About extends Component {
   render() {
