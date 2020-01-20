@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import cmImg from '../images/coffee-maker.png'
+import dashImg from '../images/sensor-dash.png'
+import marketImg from '../images/marketplace.png'
+
 
 export default class Projects extends Component {
   render() {
@@ -25,7 +29,7 @@ export default class Projects extends Component {
 	          <div className="row">
 	            <div className="col-md-12">
 	              <div className="work-entry animate-box">
-	                <a href="https://github.com/masakichi4/smart-coffee-maker" className="work-img" style={{backgroundImage: 'url(images/coffee-maker.png)'}}>
+	                <a href="https://github.com/masakichi4/smart-coffee-maker" className="work-img" style={{backgroundImage: `url(${cmImg})`}}>
 	                  <div className="display-t">
 	                    <div className="work-name">
 	                      <h2>Smart Coffee Maker</h2>
@@ -43,7 +47,7 @@ export default class Projects extends Component {
 	            </div>
 	            <div className="col-md-12">
 	              <div className="work-entry animate-box">
-	                <a href="https://github.com/masakichi4/Smart-Sensor-Dashboard" className="work-img" style={{backgroundImage: 'url(images/sensor-dash.png)'}}>
+	                <a href="https://github.com/masakichi4/Smart-Sensor-Dashboard" className="work-img" style={{backgroundImage: `url(${dashImg})`}}>
 	                  <div className="display-t">
 	                    <div className="work-name">
 	                      <h2>Smart Sensor Dashboard</h2>
@@ -61,7 +65,7 @@ export default class Projects extends Component {
 	            </div>
 	            <div className="col-md-12">
 	              <div className="work-entry animate-box">
-	                <a href="https://github.com/masakichi4/Marketplace" className="work-img" style={{backgroundImage: 'url(images/marketplace.png)'}}>
+	                <a href="https://github.com/masakichi4/Marketplace" className="work-img" style={{backgroundImage: `url(${marketImg})`}}>
 	                  <div className="display-t">
 	                    <div className="work-name">
 	                      <h2>All-in-One Marketplace</h2>

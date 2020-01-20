@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import teaImg from '../images/tea.jpeg'
+import plantImg from '../images/plants.jpeg'
 
 export default class Experience extends Component {
   render() {
@@ -45,7 +47,7 @@ export default class Experience extends Component {
 	                    </div>
 	                  </div>
 	                </div>
-	                <div className="one-forth services-img" style={{backgroundImage: 'url(images/tea.jpeg)'}}>
+	                <div className="one-forth services-img" style={{backgroundImage: `url(${teaImg})`}}>
 	                </div>
 	              </div>
 	            </div>
@@ -114,7 +116,7 @@ export default class Experience extends Component {
 	                    </div>
 	                  </div>
 	                </div>
-	                <div className="one-forth services-img" style={{backgroundImage: 'url(images/about-2.jpeg)'}}>
+	                <div className="one-forth services-img" style={{backgroundImage: `url(${plantImg})`}}>
 	                </div>
 	              </div>
 	            </div>

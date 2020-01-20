@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import profileImg from '../images/about.jpeg'
 
 export default class About extends Component {
   render() {
@@ -20,7 +21,7 @@ export default class About extends Component {
                     </div>
                   </div>*/}
                   <div className="item">
-                    <img className="img-responsive about-img" src="images/about.jpeg" alt="about-img" />
+                    <img className="img-responsive about-img" src={require('../images/about.jpeg')} alt="profile-img" />
                   </div>
                 </div>
 
