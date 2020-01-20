@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import teaImg from '../images/tea.jpeg'
-import plantImg from '../images/plants.jpeg'
+const plantImg = require('../images/plants.jpeg')
+const teaImg = require('../images/tea.jpeg')
+
 
 export default class Experience extends Component {
   render() {
