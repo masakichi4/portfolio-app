@@ -27,9 +27,9 @@ export default class Projects extends Component {
 	          <div className="row">
 	            <div className="col-md-12">
 	              <div className="work-entry animate-box">
-	                <iframe src='https://youtu.be/98W-zunXf_0'
+	                <iframe src='https://www.youtube.com/embed/98W-zunXf_0'
 				        frameBorder='0'
-				        allow='autoplay; encrypted-media'
+				        allow="accelerometer; autoplay; encrypted-media; picture-in-picture" 
 				        allowFullScreen
 				        title='video'
 				        className="work-img"
@@ -48,9 +48,9 @@ export default class Projects extends Component {
 	            </div>
 	            <div className="col-md-12">
 	              <div className="work-entry animate-box">
-	                <iframe src='https://youtu.be/kVOZg3WpK8w'
+	                <iframe src='https://www.youtube.com/embed/kVOZg3WpK8w'
 				        frameBorder='0'
-				        allow='autoplay; encrypted-media'
+				        allow="accelerometer; autoplay; encrypted-media; picture-in-picture" 
 				        allowFullScreen
 				        title='video'
 				        className="work-img"
@@ -60,7 +60,7 @@ export default class Projects extends Component {
 	                      <h2>Smart Sensor Dashboard</h2>
 	                  </div>
 	                  <div className="desc">
-	                    <p>Smart Sensor Dashboard is a web-based dashboard visualizing simulated sensor data retrieved from MongoDB and MySQL. It is a component completed individually in a larger group project.</p>
+	                    <p>Smart Sensor Dashboard is a web-based dashboard visualizing simulated sensor data retrieved from MongoDB and MySQL. It is a component completed individually for a larger group project.</p>
 	                    <p>This dashboard was built with Node.js, Vue.js (Vuetify), MongoDB, MySQL, and deployed to Heroku.</p>
 	                    <p className="read"><a href="https://github.com/masakichi4/Smart-Sensor-Dashboard">View code on GitHub</a></p>
 	                  </div>
@@ -69,13 +69,12 @@ export default class Projects extends Component {
 	            </div>
 	            <div className="col-md-12">
 	              <div className="work-entry animate-box">
-	                <iframe src='https://youtu.be/JQYCTJ5hy_E'
-				        frameBorder='0'
-				        allow='autoplay; encrypted-media'
-				        allowFullScreen
-				        title='video'
-				        className="work-img"
-					/>
+					<iframe className="work-img" 
+					src="https://www.youtube.com/embed/JQYCTJ5hy_E" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; picture-in-picture" 
+					title='video'
+					allowfullscreen />
 	                <div className="col-md-4 col-md-offset-4">
 	                  <div className="work-name">
 	                      <h2>All-in-One Marketplace</h2>
