@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import {
+  Link,
+} from "react-router-dom";
 
 export default class About extends Component {
   render() {
@@ -49,7 +52,7 @@ export default class About extends Component {
                         <a style={{padding:'10px'}} href="https://www.youtube.com/channel/UC1P4878OVbvbfa4cZpG-EhQ/" target="_blank" rel="noopener noreferrer"><i className="icon-youtube" /></a>
                       </p>
                       
-                      <p><a href="https://github.com/masakichi4" className="btn btn-primary btn-outline">View my resume</a></p>
+                      <p><Link to="/Resume_HeJiang.pdf" className="btn btn-primary btn-outline" target="_blank" download>Download Resume</Link></p>
                     </div>
                   </div>
                 </div>
