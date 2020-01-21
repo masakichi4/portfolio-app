@@ -52,7 +52,7 @@ export default class About extends Component {
                         <a style={{padding:'10px'}} href="https://www.youtube.com/channel/UC1P4878OVbvbfa4cZpG-EhQ/" target="_blank" rel="noopener noreferrer"><i className="icon-youtube" /></a>
                       </p>
                       
-                      <p><Link to="/Resume_HeJiang.pdf" className="btn btn-primary btn-outline" target="_blank" download>Download Resume</Link></p>
+                      <p><Link to={process.env.PUBLIC_URL+"/Resume_HeJiang.pdf"} className="btn btn-primary btn-outline" target="_blank">View Resume</Link></p>
                     </div>
                   </div>
                 </div>
