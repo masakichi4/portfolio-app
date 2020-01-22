@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.4s;
+  -webkit-transition: all 0.4s; 
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s; 
   -o-transition: all 0.4s;
