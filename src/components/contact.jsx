@@ -11,16 +11,17 @@ export default class Contact extends Component {
             </div>
 
             <div className="row">
-              <div className="col-md-6 col-pb-sm">
+              <div className="col-md-12 col-pb-sm">
                 <div className="row">
-                  <div className="col-md-10">
+                  <div className="col-md-12">
                     <h2>Let's Talk</h2>
-                    <p>Looking for interships and/or part-time opportunities.</p>
-                    <p><a href="mailto:mackenziejiang@gmail.com">mackenziejiang@gmail.com</a></p>
+                    <p>Looking for full-time software development opportunities.</p>
+                    
                     <p className="colorlib-social-icons">
-                      <a style={{padding:'10px'}} href="https://www.linkedin.com/in/hejiang4/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin" /></a>
-                      <a style={{padding:'10px'}} href="https://github.com/masakichi4" target="_blank" rel="noopener noreferrer"><i className="icon-github" /></a>
-                      <a style={{padding:'10px'}} href="https://www.youtube.com/channel/UC1P4878OVbvbfa4cZpG-EhQ/" target="_blank" rel="noopener noreferrer"><i className="icon-youtube" /></a>
+                      <p>Email: <a href="mailto:mackenziejiang@gmail.com">mackenziejiang@gmail.com</a></p>
+                      <p>LinkedIn: <a style={{padding:'10px'}} href="https://www.linkedin.com/in/hejiang4/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin" /></a></p>
+                      <p>GitHub: <a style={{padding:'10px'}} href="https://github.com/masakichi4" target="_blank" rel="noopener noreferrer"><i className="icon-github" /></a></p>
+                      <p>Youtube: <a style={{padding:'10px'}} href="https://www.youtube.com/channel/UC1P4878OVbvbfa4cZpG-EhQ/" target="_blank" rel="noopener noreferrer"><i className="icon-youtube" /></a></p>
                     </p>
                   </div>
                 </div>
@@ -49,16 +50,7 @@ export default class Contact extends Component {
                   </div>
                 </div>
               </div>*/}
-              <div className="col-md-6 col-pb-sm">
-                <h2>Newsletter</h2>
-                <p>Please enter your email below to subscribe.</p>
-                <div className="subscribe text-center">
-                  <div className="form-group">
-                    <input type="text" className="form-control text-center" placeholder="Enter Email address" />
-                    <br /><input type="submit" defaultValue="Subscribe" className="btn btn-primary btn-custom" />
-                  </div>
-                </div>
-              </div>
+
             </div>
             <div className="row">
               <div className="col-md-12 text-center">
