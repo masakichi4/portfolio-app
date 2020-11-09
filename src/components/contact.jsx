@@ -5,7 +5,7 @@ export default class Contact extends Component {
     return (
       <div>
         <div id="colorlib-contact">
-          <div className="container">
+          <div className="container" id="contact">
             <div className="row text-center">
                 <h2 className="bold">Contact</h2>
             </div>
@@ -18,12 +18,13 @@ export default class Contact extends Component {
                     <p>Looking for full-time software development opportunities.</p>
                     
                     <p className="colorlib-social-icons">
-                      <p>Email: <a href="mailto:mackenziejiang@gmail.com">mackenziejiang@gmail.com</a></p>
+                      <p><a href="mailto:mackenziejiang@gmail.com">Email </a></p>
                       <p>LinkedIn: <a style={{padding:'10px'}} href="https://www.linkedin.com/in/hejiang4/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin" /></a></p>
                       <p>GitHub: <a style={{padding:'10px'}} href="https://github.com/masakichi4" target="_blank" rel="noopener noreferrer"><i className="icon-github" /></a></p>
                       <p>Youtube: <a style={{padding:'10px'}} href="https://www.youtube.com/channel/UC1P4878OVbvbfa4cZpG-EhQ/" target="_blank" rel="noopener noreferrer"><i className="icon-youtube" /></a></p>
                     </p>
                   </div>
+                  <p><a href='#top' className="btn btn-primary btn-outline">Back to top</a></p>
                 </div>
               </div>
               {/*<div className="col-md-4 col-pb-sm">

@@ -1,23 +1,31 @@
 import React from 'react';
 import './App.css';
-import Sidebar from './components/sidebar'
+import TopBar from './components/topBar'
+import About from './components/about'
+import Experience from './components/experience'
+import Projects from './components/projects'
+import Contact from './components/contact'
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 
 
 function App() {
   return (
-    <div id="colorlib-page">
-      <div id="container-wrap">
-      <Sidebar></Sidebar>
-        <div id="colorlib-main">
-          {/*<About></About>
-          <Experience></Experience>
-          <Projects></Projects>
-          <Gallery></Gallery>
-          <Contact></Contact>*/}
+    <Router>
+      <div id="colorlib-page">
+        <div id="container-wrap">
+          <div id="colorlib-main">
+            <TopBar />
+            <About />
+            <Experience />
+            <Projects />
+            <Contact />
+          </div>
         </div>
+        
       </div>
-      
-    </div>
+    </Router>
   );
 }
 

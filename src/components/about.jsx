@@ -8,7 +8,7 @@ export default class About extends Component {
     return (
         <div>              
           <div id="colorlib-about">
-            <div className="container">
+            <div className="container" id="about">
               <div className="row text-center">
                 <h2 className="bold">About</h2>
               </div>
@@ -46,7 +46,7 @@ export default class About extends Component {
                         <h2 className="heading">About</h2>
                       </div>
                       <p>Welcome to my site!<br/> I am Mackenzie, a software engineering master's student at San Jose State University.</p>
-                      <p>I am graduating in December 2020, and looking for a full-time software development position starting after graduation.</p>
+                      <p>I am graduating in December 2020, and looking for a full-time software development position starting 2021.</p>
                       <p>Please feel free to <a href="mailto:mackenziejiang@gmail.com">email</a> me if you have any opportunities for me! (or pictures of cute puppies) Thank you!</p>
                       <p className="colorlib-social-icons">
                         <a style={{padding:'10px'}} href="https://www.linkedin.com/in/hejiang4/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin" /></a>
