@@ -1,30 +1,27 @@
 import React from 'react';
 import './App.css';
 import TopBar from './components/topBar'
-import About from './components/about'
-import Experience from './components/experience'
-import Projects from './components/projects'
-import Contact from './components/contact'
 import {
   BrowserRouter as Router,
 } from "react-router-dom";
-
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 
 function App() {
   return (
     <Router>
-      <div id="colorlib-page">
-        <div id="container-wrap">
-          <div id="colorlib-main">
-            <TopBar />
-            <About />
-            <Experience />
-            <Projects />
-            <Contact />
+      <I18nextProvider i18n={i18n}>
+        <div id="colorlib-page">
+          <div id="container-wrap">
+            <div id="colorlib-main">
+              <TopBar />
+
+
+            </div>
           </div>
+          
         </div>
-        
-      </div>
+      </I18nextProvider>
     </Router>
   );
 }

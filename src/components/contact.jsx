@@ -1,7 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { withTranslation, Trans } from "react-i18next";
 
-export default class Contact extends Component {
+
+class Contact extends Component {
   render() {
+    const { t } = this.props;
     return (
       <div>
         <div id="colorlib-contact">
@@ -13,18 +16,21 @@ export default class Contact extends Component {
             <div className="row">
               <div className="col-md-12 col-pb-sm">
                 <div className="row">
-                  <div className="col-md-12">
-                    <h2>Let's Talk</h2>
-                    <p>Looking for full-time software development opportunities.</p>
+                  <div className="col-md-6">
+                    <h2><Trans>{t("Let's Talk")}</Trans></h2>
+                    <p><Trans>{t("Looking for full-time software development opportunities.")}</Trans></p>
                     
-                    <p className="colorlib-social-icons">
-                      <p><a href="mailto:mackenziejiang@gmail.com">Email </a></p>
-                      <p>LinkedIn: <a style={{padding:'10px'}} href="https://www.linkedin.com/in/hejiang4/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin" /></a></p>
+                    <div className="colorlib-social-icons">
+                      <p><a href="mailto:mackenziejiang@gmail.com"><Trans>{t("email")}</Trans></a></p>
+                      <p><Trans>{t("LinkedIn")}</Trans>: <a style={{padding:'10px'}} href="https://www.linkedin.com/in/hejiang4/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin" /></a></p>
                       <p>GitHub: <a style={{padding:'10px'}} href="https://github.com/masakichi4" target="_blank" rel="noopener noreferrer"><i className="icon-github" /></a></p>
                       <p>Youtube: <a style={{padding:'10px'}} href="https://www.youtube.com/channel/UC1P4878OVbvbfa4cZpG-EhQ/" target="_blank" rel="noopener noreferrer"><i className="icon-youtube" /></a></p>
-                    </p>
+                    </div>
                   </div>
-                  <p><a href='#top' className="btn btn-primary btn-outline">Back to top</a></p>
+                  <div className="col-md-6">
+                      <img className="img-responsive about-img" src={require('../images/doggo.jpg')} alt="doggo-img" />
+                      <p><a href='#top' className="btn btn-primary btn-outline"><Trans>{t("Back to top")}</Trans></a></p>
+                  </div>
                 </div>
               </div>
               {/*<div className="col-md-4 col-pb-sm">
@@ -68,3 +74,5 @@ export default class Contact extends Component {
     )
   }
 }
+
+export default withTranslation("translations")(Contact);

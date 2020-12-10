@@ -1,31 +1,31 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { withTranslation, Trans } from "react-i18next";
 
 
-
-export default class Projects extends Component {
+class Projects extends Component {
   render() {
+  	const { t } = this.props;
   	const projects = [
-  	{title: 'Spontit Website', repo: '', demo: 'https://www.youtube.com/embed/bg3bYH4clzQ', image: '',
-  	  descriptions: <p>This video provides a brief walkthrough and introduces some features of Spontit's website implemented by Mackenzie.<br/><br/>
-	  Technologies: React.js, Node.js, Python, DynamoDB.</p>},
+  	{title: <Trans>{t('Spontit Website')}</Trans>, repo: '', demo: 'https://www.youtube.com/embed/bg3bYH4clzQ', image: '',
+  	  descriptions: <p><Trans>{t("This video provides a brief walkthrough and introduces some features of Spontit's website implemented by Mackenzie.")}</Trans><br/><br/>
+	  <Trans>{t('Technologies')}</Trans>: React.js, Node.js, Python, DynamoDB.</p>},
 
-	{title: 'Bus Location Tracker', repo: 'https://github.com/masakichi4/bus-app', demo: '', image: require('../images/bus-main.jpg'),
-  	  descriptions: <p>- Individually designed and created a bus location tracking application in React with transportation data from 511.org API, 
-  	  showing real time bus locations on Google Maps and speed statistics with Victory charts.</p>},
+	{title: <Trans>{t("Bus Location Tracker")}</Trans>, repo: 'https://github.com/masakichi4/bus-app', demo: '', image: require('../images/bus-main.jpg'),
+  	  descriptions: <p><Trans>{t("- Individually designed and created a bus location tracking application in React with transportation data from 511.org API, showing real time bus locations on Google Maps and speed statistics with Victory charts.")}</Trans></p>},
 
-  	{title: 'Url Shortener', repo: 'https://github.com/masakichi4/short-url', demo: '', image: '',
-  	  descriptions: <p>- Individually designed and created an app in Node.JS that converts an inputted long url to a shorter url.</p>},
+  	{title: <Trans>{t("Url Shortener")}</Trans>, repo: 'https://github.com/masakichi4/short-url', demo: '', image: '',
+  	  descriptions: <p><Trans>{t("- Individually designed and created an app in Node.JS that converts an inputted long url to a shorter url.")}</Trans></p>},
 
-  	{title: 'Smart Sensor Dashboard', repo: 'https://github.com/masakichi4/Smart-Sensor-Dashboard', demo: 'https://www.youtube.com/embed/kVOZg3WpK8w', image: '',
-  	  descriptions: <p>- Led a team of 4 to create a Vue dashboard to display sensor data stored in MongoDB.</p>},
+  	{title: <Trans>{t("Smart Sensor Dashboard")}</Trans>, repo: 'https://github.com/masakichi4/Smart-Sensor-Dashboard', demo: 'https://www.youtube.com/embed/kVOZg3WpK8w', image: '',
+  	  descriptions: <p><Trans>{t("- Led a team of 4 to create a Vue dashboard to display sensor data stored in MongoDB.")}</Trans></p>},
 
-  	{title: 'Smart Coffee Maker', repo: 'https://github.com/masakichi4/smart-coffee-maker', demo: 'https://www.youtube.com/embed/98W-zunXf_0', image: '',
-  	  descriptions: <p>Smart Coffee Maker is a web application simulating coffee ordering and customization activities from multiple clients. <br/><br/>
-	                    The web client and server implementations follow the LWM2M Protocol. Technologies: Node.js, Vue.js, WebSocket, MongoDB, MySQL.</p>},
+  	{title: <Trans>{t("Smart Coffee Maker")}</Trans>, repo: 'https://github.com/masakichi4/smart-coffee-maker', demo: 'https://www.youtube.com/embed/98W-zunXf_0', image: '',
+  	  descriptions: <p><Trans>{t("Smart Coffee Maker is a web application simulating coffee ordering and customization activities from multiple clients.")}</Trans> <br/><br/>
+	                    <Trans>{t("The web client, java client, and server implementations follow the LWM2M Protocol.")}</Trans> <Trans>{t('Technologies')}</Trans>: Node.js, Vue.js, WebSocket, MongoDB, MySQL, Java.</p>},
 
-  	{title: 'All-in-One Marketplace', repo: 'https://github.com/masakichi4/Marketplace', demo: "https://www.youtube.com/embed/JQYCTJ5hy_E", image: '',
-  	  descriptions: <p>All-in-One Marketplace is a group project. We created an online marketplace that supports user registration, review/rating submission, 
-  	  mostly/recently viewed tracking on multiple company websites.<br/><br/>Technologies: PHP, MySQL, HTML, CSS, and Javascript.</p>},
+  	{title: <Trans>{t("All-in-One Marketplace")}</Trans>, repo: 'https://github.com/masakichi4/Marketplace', demo: "https://www.youtube.com/embed/JQYCTJ5hy_E", image: '',
+  	  descriptions: <p><Trans>{t("All-in-One Marketplace is a group project. We created an online marketplace that supports user registration, review/rating submission, mostly/recently viewed tracking on multiple company websites.")}</Trans>
+  	  <br/><br/><Trans>{t('Technologies')}</Trans>: PHP, MySQL, HTML, CSS, Javascript.</p>},
   	]
 
     return (
@@ -37,21 +37,21 @@ export default class Projects extends Component {
 	          </div>
 	          <div className="row">
 	            <div className="col-md-12 col-md-offset-0 text-center  intro-heading">
-	              <span>Portfolio</span>
-	              <h2>Past Projects</h2>
+	              <span><Trans>{t("Portfolio")}</Trans></span>
+	              <h2><Trans>{t("projects")}</Trans></h2>
 	            </div>
 	          </div>
 	          <div className="row">
 	            <div className="col-md-12">
 	              <div className="rotate">
-	                <h2 className="heading">Portfolio</h2>
+	                <h2 className="heading"><Trans>{t("Portfolio")}</Trans></h2>
 	              </div>
 	            </div>
 	          </div>
 	          
 	          {projects.length > 0 && projects.map(project => {
 	          	return (
-	              <div className="row">
+	              <div className="row" key={project.repo+project.demo}>
 		            <div className="col-md-12">
 		              <div className="work-entry " id="spontit-demo">
 		                <div className="col-md-6 col-md-offset-3 ">
@@ -59,12 +59,13 @@ export default class Projects extends Component {
 		                      <h2>{project.title}</h2>
 		                  </div>
 		                  <div className="desc">
-		                    {project.repo && <p><a href={project.repo} target="_blank">Repo</a></p>}
+		                    {project.repo && <p><a href={project.repo} target="_blank" rel="noopener noreferrer"><Trans>{t("Repo")}</Trans></a></p>}
 		                    {project.descriptions}
-		                    {project.demo && <p className="read"><a href={project.demo} target="_blank">View demo on Youtube</a></p>}
+		                    {project.demo && <p className="read"><a href={project.demo} target="_blank" rel="noopener noreferrer"><Trans>{t("View demo on Youtube")}</Trans></a></p>}
 		                  </div>
 		                </div>
-		                {project.demo && <iframe src={project.demo}
+		                {project.demo && <iframe 
+		                	src={project.demo}
 					        frameBorder='0'
 					        allow="accelerometer; autoplay; encrypted-media; picture-in-picture" 
 					        allowFullScreen
@@ -81,7 +82,7 @@ export default class Projects extends Component {
 	        	display: 'flex',
 		    	flexDirection: 'row',
 		    	justifyContent: 'space-evenly'}}>
-	            <p><a href='#top' className="btn btn-primary btn-outline">Back to top</a></p>
+	            <p><a href='#top' className="btn btn-primary btn-outline"><Trans>{t("Back to top")}</Trans></a></p>
 	          </div>
 	        </div>
 	      </div>
@@ -89,3 +90,4 @@ export default class Projects extends Component {
     )
   }
 }
+export default withTranslation("translations")(Projects);

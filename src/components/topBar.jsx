@@ -1,21 +1,87 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './topBar.css';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import Grid from '@material-ui/core/Grid';
+import { withTranslation, Trans } from "react-i18next";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink
+} from "react-router-dom";
+import About from './about'
+import Experience from './experience'
+import Projects from './projects'
+import Contact from './contact'
 
-export default class TopBar extends Component {
+
+class TopBar extends Component {
+  state = {
+    value: this.props.i18n.language
+  };
+
+  handleChange = event => {
+  	event.preventDefault();
+	let newlang = event.target.value;
+	this.setState(prevState => ({ value: newlang }));
+	this.props.i18n.changeLanguage(newlang);
+  };
+
   render() {
+  	const buttonStyles = {
+  		margin: '1vw 1vw 0.1vw'
+  	}
+  	const {value} = this.state;
+  	const { t, i18n } = this.props;
+  	console.log(i18n)
+
     return (
-        <div 
-        id="top"
-        style={{
-        	padding: '1vh',
-        	display: 'flex',
-	    	flexDirection: 'row',
-	    	justifyContent: 'center'}}>
-	          <h3><a href='#about' className="btn-outline btn btn-primary" style={{margin: '1vw'}}>About </a></h3>
-	          <h3><a href='#experience' className="btn-outline btn btn-primary" style={{margin: '1vw'}}>Experience </a></h3>
-	          <h3><a href='#skills' className="btn-outline btn btn-primary" style={{margin: '1vw'}}>Skills </a></h3>
-	          <h3><a href='#projects' className="btn-outline btn btn-primary" style={{margin: '1vw'}}>Projects </a></h3>
-	          <h3><a href='#contact' className="btn-outline btn btn-primary" style={{margin: '1vw'}}>Contact </a></h3>
-	      {/*<div className="row row-padded-bottom">
+	    <Router>
+	    	<Grid
+		    container
+		    direction="row"
+		    justify="center"
+	        id="top"
+	        style={{padding: '1vh 1vh 0vh'}}>
+		    	<FormControl component="fieldset" style={buttonStyles}>
+			      <RadioGroup row aria-label="language" name="language" value={value} onChange={this.handleChange}>
+			      <FormControlLabel value="en" control={<Radio color="primary" style={{marginBottom: '0em'}} />} label="English" />
+			        <FormControlLabel value="zh-CN" control={<Radio color="primary" />} label="中文" />
+			      </RadioGroup>
+
+			    </FormControl>
+		    	
+		    	  <h3><NavLink to='/' className="btn-outline btn btn-primary" style={buttonStyles} ><Trans>{t("home")}</Trans> </NavLink></h3>
+		          <h3><NavLink to='/about' className="btn-outline btn btn-primary" style={buttonStyles}><Trans>{t("about")}</Trans> </NavLink></h3>
+		          <h3><NavLink to='/experience' className="btn-outline btn btn-primary" style={buttonStyles}><Trans>{t("experience")}</Trans> </NavLink></h3>
+		          <h3><NavLink to='/projects' className="btn-outline btn btn-primary" style={buttonStyles}><Trans>{t("projects")}</Trans> </NavLink></h3>
+		          <h3><NavLink to='/contact' className="btn-outline btn btn-primary" style={buttonStyles}><Trans>{t("contact")}</Trans> </NavLink></h3>
+		    </Grid>
+		    <Switch>
+	          <Route path="/about">
+	            <About />
+	          </Route>
+	          <Route path="/experience">
+	            <Experience />
+	          </Route>
+	          <Route path="/projects">
+	            <Projects />
+	          </Route>
+	          <Route path="/contact">
+	            <Contact />
+	          </Route>
+	          <Route path="/">
+	            <About />
+	            <Experience />
+	            <Projects />
+	            <Contact />
+	          </Route>
+	       </Switch>
+	    </Router>
+	      /*<div className="row row-padded-bottom">
 	        <div className="col-md-5 animate-box">
 	          <div className="owl-carousel3">
 	            <div className="item">
@@ -61,8 +127,9 @@ export default class TopBar extends Component {
 	            </div>
 	          </div>
 	        </div>
-	      </div>*/}
-	    </div>
+	      </div>*/
+	    
     )
   }
 }
+export default withTranslation("translations")(TopBar);
