@@ -36,16 +36,14 @@ class About extends Component {
                       <div className="rotate">
                         <h2 className="heading"><Trans>{t("about")}</Trans></h2>
                       </div>
-                      <p><Trans>{t("Welcome to my site!")}</Trans><br/> <Trans>{t("I am Mackenzie, a software engineering master's student graduated from San Jose State University in December 2020.")}</Trans></p>
-                      <p><Trans>{t("I am looking for a full-time software development position starting 2021.")}</Trans></p>
-                      <p><Trans>{t("Please feel free to ")}</Trans><a href="mailto:mackenziejiang@gmail.com"><Trans>{t("email")}</Trans></a> <Trans>{t("me if you have any opportunities for me! Thank you!")}</Trans></p>
+                      <p><Trans>{t("Welcome to my site!")}</Trans><br/> <Trans>{t("I am Mackenzie, a web developer at Fortinet.")}</Trans></p>
                       <p className="colorlib-social-icons">
                         <a style={{padding:'10px'}} href="https://www.linkedin.com/in/hejiang4/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin" /></a>
                         <a style={{padding:'10px'}} href="https://github.com/masakichi4" target="_blank" rel="noopener noreferrer"><i className="icon-github" /></a>
                         <a style={{padding:'10px'}} href="https://www.youtube.com/channel/UC1P4878OVbvbfa4cZpG-EhQ/" target="_blank" rel="noopener noreferrer"><i className="icon-youtube" /></a>
                       </p>
                       
-                      <p><Link to={process.env.PUBLIC_URL+"/Resume_HeJiang.pdf"} className="btn btn-primary btn-outline" target="_blank"><Trans>{t("view resume")}</Trans></Link></p>
+                      <p><Link to={process.env.PUBLIC_URL+"/Resume_hj.pdf"} className="btn btn-primary btn-outline" target="_blank"><Trans>{t("view resume")}</Trans></Link></p>
                     </div>
                   </div>
                 </div>

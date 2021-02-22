@@ -13,7 +13,7 @@ i18n.use(LanguageDetector).init({
         "projects":"Projects",
         "contact":"Contact",
         "Welcome to my site!": "Welcome to my site!",
-        "I am Mackenzie, a software engineering master's student graduated from San Jose State University in December 2020.": "I am Mackenzie, a software engineering master's student graduated from San Jose State University in December 2020.",
+        "I am Mackenzie, a web developer at Fortinet.": "I am Mackenzie, a web developer at Fortinet.",
         "I am looking for a full-time software development position starting 2021.": "I am looking for a full-time software development position starting 2021.",
         "Please feel free to ":"Please feel free to ",
         "email": "email",
@@ -21,6 +21,7 @@ i18n.use(LanguageDetector).init({
         "view resume":"view resume",
         "Education & Work": "Education & Work",
         "demo": "Demo",
+        "Web Development": "Web Development",
         "Software Development Internship": "Software Development Internship",
         "- Built the startup’s website from scratch in React with reusable components and dynamic components, boosting the number of daily active users by 3x.":"- Built the startup’s website from scratch in React with reusable components and dynamic components, boosting the number of daily active users by 3x.",
         "- Rendered the app with an Express server, decreased load time by 50% through code splitting.": "- Rendered the app with an Express server, decreased load time by 50% through code splitting.",
@@ -78,7 +79,7 @@ i18n.use(LanguageDetector).init({
         "projects":"个人项目",
         "contact":"联系方式",
         "Welcome to my site!": "欢迎来到我的个人网站！",
-        "I am Mackenzie, a software engineering master's student graduated from San Jose State University in December 2020.": "我叫姜和，2020年12月于圣何塞州立大学获得软件工程硕士学位。",
+        "I am Mackenzie, a web developer at Fortinet.": "我叫姜和，在Fortinet公司从事网络开发。",
         "I am looking for a full-time software development position starting 2021.": "我的求职意向为软件开发，计划2021年入职。",
         "Please feel free to ": "如果您认为有适合我的开放岗位，可以通过",
         "email": "邮件",
@@ -86,6 +87,7 @@ i18n.use(LanguageDetector).init({
         "view resume": "阅读简历",
         "Education & Work": "教育背景及工作经历",
         "demo": "视频演示",
+        "Web Development": "网页开发",
         "Software Development Internship": "软件开发实习生",
         "- Built the startup’s website from scratch in React with reusable components and dynamic components, boosting the number of daily active users by 3x.":
         "- 帮助初创公司从头建立网站，运用React编写可再用组件，动态组件等，提升日活跃用户数量至3倍。",
@@ -119,7 +121,7 @@ i18n.use(LanguageDetector).init({
         "Portfolio": "作品集",
         "Spontit Website": "Spontit 网站",
         "This video provides a brief walkthrough and introduces some features of Spontit's website implemented by Mackenzie.":
-        "以下视频简单演练了Spontit网站，以及姜和实现的一些网站功能。",
+        "以下视频简单演练了Spontit网站，以及本人实现的一些网站功能。",
         "Technologies": "技术",
         "Bus Location Tracker": "公交车实时定位",
         "- Individually designed and created a bus location tracking application in React with transportation data from 511.org API, showing real time bus locations on Google Maps and speed statistics with Victory charts.":

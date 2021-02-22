@@ -33,6 +33,10 @@ class Experience extends Component {
 	                      </div>
 	                    </div>
 	                    <div className="col-md-12">
+	                      <div className="services ">
+	                        <h3>Fortinet <span style={{padding:'20px'}}> 2021.2</span> &nbsp;</h3>
+	                        <p><Trans>{t("Web Development")}</Trans></p>
+	                      </div>
 	                   	  <div className="services ">
 	                        <h3>Spontit <span style={{padding:'20px'}}> 2020.2~2020.8</span> &nbsp;<a href='#spontit-demo'><Trans>{t("demo")}</Trans></a></h3>
 	                        <p><Trans>{t("Software Development Internship")}</Trans></p>

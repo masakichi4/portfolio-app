@@ -18,10 +18,8 @@ class Contact extends Component {
                 <div className="row">
                   <div className="col-md-6">
                     <h2><Trans>{t("Let's Talk")}</Trans></h2>
-                    <p><Trans>{t("Looking for full-time software development opportunities.")}</Trans></p>
                     
                     <div className="colorlib-social-icons">
-                      <p><a href="mailto:mackenziejiang@gmail.com"><Trans>{t("email")}</Trans></a></p>
                       <p><Trans>{t("LinkedIn")}</Trans>: <a style={{padding:'10px'}} href="https://www.linkedin.com/in/hejiang4/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin" /></a></p>
                       <p>GitHub: <a style={{padding:'10px'}} href="https://github.com/masakichi4" target="_blank" rel="noopener noreferrer"><i className="icon-github" /></a></p>
                       <p>Youtube: <a style={{padding:'10px'}} href="https://www.youtube.com/channel/UC1P4878OVbvbfa4cZpG-EhQ/" target="_blank" rel="noopener noreferrer"><i className="icon-youtube" /></a></p>
